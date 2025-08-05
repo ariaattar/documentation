@@ -1,0 +1,80 @@
+---
+title: 'Semantic Search'
+description: 'Intelligent search for models, errors, and context across your dbt project'
+---
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/FfHu0Nq.gif"
+  alt="Semantic Search in Action"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/FfHu0Nq.gif"
+  alt="Semantic Search in Action"
+/>
+
+## Overview
+
+Semantic Search provides an intelligent search experience that goes beyond simple file name matching. Search for errors, ask questions about models, or find files by context - all processed in real-time with no pre-built indexes.
+
+## How It Works
+
+The search bar understands natural language queries and semantic context:
+
+- **Error Search**: Type error messages to quickly locate the problematic files
+- **Contextual Queries**: Ask questions about models and their functionality  
+- **File Name Search**: Traditional file name searches work seamlessly
+- **Macro Discovery**: Find macros by describing what they do
+
+## Performance
+
+<AccordionGroup>
+  <Accordion icon="clock" title="Medium Projects">
+    **Under 500ms** - Fast results for typical dbt projects
+  </Accordion>
+
+  <Accordion icon="database" title="Large Projects">  
+    **Under 5 seconds** - Even projects with 1000s of files return results quickly
+  </Accordion>
+</AccordionGroup>
+
+## Real-Time Processing
+
+<Note>
+**No indexes stored** - Everything is computed in memory to ensure the most up-to-date results. Changes to your project are immediately searchable without rebuilding indexes.
+</Note>
+
+## Search Examples
+
+### Error Detection
+- Type error messages from your dbt runs
+- The search will identify which specific files contain the errors
+- Get direct navigation to problematic code
+
+### Model Questions
+- "Find the model that calculates customer lifetime value"  
+- "Show me models that use the orders table"
+- "Which model handles revenue calculations"
+
+### Macro Discovery
+- "Find macro that formats dates"
+- "Show me the macro for data quality checks"
+- "Macro that handles null values"
+
+### File Search
+- Standard file name searches work alongside semantic queries
+- Partial names and patterns are supported
+- Case-insensitive matching
+
+## Key Features
+
+- **Context-Aware**: Understands the purpose and functionality of your models
+- **Error-Focused**: Quickly pinpoint files causing build failures  
+- **No Maintenance**: No indexes to rebuild or maintain
+- **Always Current**: Searches reflect your latest code changes immediately
+- **Natural Language**: Ask questions in plain English
+
+<Tip>
+Try combining different search approaches - you can search for errors, then follow up with contextual questions about the affected models.
+</Tip>

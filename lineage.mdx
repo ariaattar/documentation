@@ -1,0 +1,76 @@
+---
+title: 'Lineage'
+description: 'Visualize and explore your complete dbt project lineage'
+---
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/EPWEIuL.gif"
+  alt="Lineage Visualization"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/EPWEIuL.gif"
+  alt="Lineage Visualization"
+/>
+
+## Overview
+
+The Lineage page provides a comprehensive view of your entire dbt project's data flow. You can visualize how your models, sources, tests, seeds, and snapshots connect to each other, making it easy to understand data dependencies and relationships.
+
+## Building Lineage
+
+### First Time Setup
+
+If you're viewing lineage for the first time, click the **Build Lineage** button to generate your project's lineage graph.
+
+### Refreshing Lineage
+
+To refresh your lineage after making changes to your dbt project:
+
+1. Click the **Build Lineage** button
+2. TensorStax will rebuild your lineage in a few hundred milliseconds
+3. This is significantly faster than native dbt lineage generation
+
+<Tip>
+TensorStax's lineage building is optimized for speed, typically completing in under 500ms compared to several seconds with native dbt.
+</Tip>
+
+## Lineage Settings
+
+Access lineage settings to customize your view and control what information is displayed.
+
+### Upstream Tracing
+
+- **Enable Upstream Tracing**: Toggle this option to show or hide upstream dependencies in your lineage view
+
+### Node Types
+
+Control which types of nodes are visible in your lineage:
+
+<AccordionGroup>
+  <Accordion icon="list" title="All Types">
+    Select this to show all node types in your lineage visualization.
+  </Accordion>
+
+  <Accordion icon="database" title="Models">
+    Show only dbt models in the lineage view.
+  </Accordion>
+
+  <Accordion icon="table" title="Sources">
+    Display source tables and their connections.
+  </Accordion>
+
+  <Accordion icon="shield-check" title="Tests">
+    Include dbt tests in the lineage visualization.
+  </Accordion>
+
+  <Accordion icon="seedling" title="Seeds">
+    Show seed files and their downstream dependencies.
+  </Accordion>
+
+  <Accordion icon="camera" title="Snapshots">
+    Display snapshot models in the lineage.
+  </Accordion>
+</AccordionGroup>
+

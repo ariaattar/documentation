@@ -17,10 +17,8 @@
             "group": "Get Started",
             "pages": [
               "index",
-              "quickstart",
               "data-connections",
-              "repository-cloning",
-              "development"
+              "repository-cloning"
             ]
           },
           {
@@ -28,8 +26,10 @@
             "pages": [
               "dbt-setup",
               "dbt-env-vars",
-              "ai-terminal",
-              "quick-edit"
+              "smart-shell",
+              "quick-edit",
+              "lineage",
+              "semantic-search"
             ]
           },
           {
