@@ -1,0 +1,202 @@
+---
+title: 'Connecting Your Data'
+description: 'Learn how to connect your databases to TensorStax'
+---
+
+## Overview
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/pTpKF3S.gif"
+  alt="Data Connection Process"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/pTpKF3S.gif"
+  alt="Data Connection Process"
+/>
+
+<Note>
+**Security** - Your database credentials are now safely encrypted and stored. All credentials are secured in an isolated HashiCorp Vault.
+</Note>
+
+TensorStax makes it easy to connect your data sources securely. Follow this step-by-step guide to set up your database connections.
+
+## Connection Steps
+
+<AccordionGroup>
+  <Accordion icon="gear" title="Step 1: Access Integrations">
+
+    Navigate to the **Integrations** panel on the left sidebar of your TensorStax dashboard.
+
+    <img
+      className="block dark:hidden"
+      src="/images/dataconnector0.png"
+      alt="TensorStax Integrations Panel"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/dataconnector0.png"
+      alt="TensorStax Integrations Panel"
+    />
+  </Accordion>
+
+  <Accordion icon="plus" title="Step 2: Create New Connection">
+
+    Click the **Create New Connection** button in the top right corner of the integrations page.
+
+    <img
+      className="block dark:hidden"
+      src="/images/dataconnector1.png"
+      alt="Create New Connection Button"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/dataconnector1.png"
+      alt="Create New Connection Button"
+    />
+  </Accordion>
+
+  <Accordion icon="key" title="Step 3: Enter Database Credentials">
+
+    Fill in your database credentials in the connection form. All credentials are securely encrypted before storage.
+
+    <img
+      className="block dark:hidden"
+      src="/images/dataconnector2.png"
+      alt="Database Credentials Form"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/dataconnector2.png"
+      alt="Database Credentials Form"
+    />
+
+  </Accordion>
+
+  <Accordion icon="snowflake" title="Step 4: Configure Snowflake (If Applicable)">
+
+    If you're connecting to Snowflake, you can choose to connect to specific databases or select all databases.
+
+    <img
+      className="block dark:hidden"
+      src="/images/dataconnector3.png"
+      alt="Snowflake Database Selection"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/dataconnector3.png"
+      alt="Snowflake Database Selection"
+    />
+  </Accordion>
+
+  <Accordion icon="wifi" title="Step 5: Test Connection">
+
+    The system will test your connection to ensure everything is configured correctly.
+
+    <img
+      className="block dark:hidden"
+      src="/images/dataconnector4.png"
+      alt="Connection Testing"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/dataconnector4.png"
+      alt="Connection Testing"
+    />
+  </Accordion>
+
+  <Accordion icon="check" title="Step 6: Connection Secured">
+
+    Upon successful connection, you'll see the confirmation screen indicating your database credentials are now safely encrypted and stored.
+
+    <img
+      className="block dark:hidden"
+      src="/images/dataconnector5.png"
+      alt="Security"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/dataconnector5.png"
+      alt="Security"
+    />
+  </Accordion>
+</AccordionGroup>
+
+## Security
+
+<Tip>
+  Make sure to have your database credentials ready, including host, port, username, and password.
+</Tip>
+
+- All database credentials are encrypted before storage
+- Credentials are stored in an isolated HashiCorp Vault
+- Connections use industry-standard security protocols
+- Access is controlled through role-based permissions
+
+## Supported Databases
+
+<CardGroup cols={2}>
+  <Card title="Snowflake" icon="snowflake">
+    Cloud data warehouse with scalable compute and storage.
+  </Card>
+  <Card title="PostgreSQL" icon="database">
+    Open-source relational database with advanced features.
+  </Card>
+  <Card title="MySQL" icon="database">
+    Popular open-source relational database management system.
+  </Card>
+  <Card title="BigQuery" icon="chart-bar">
+    Google Cloud's serverless data warehouse for analytics.
+  </Card>
+  <Card title="Amazon S3" icon="cloud">
+    Scalable object storage for data archiving and backup.
+  </Card>
+  <Card title="Databricks" icon="database">
+    Coming Soon - Unified analytics platform for big data and ML.
+  </Card>
+</CardGroup>
+
+<Note>
+  TensorStax supports many more database types. Contact support if you need help connecting a specific database.
+</Note>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion icon="warning" title="Connection Failed">
+    If your connection test fails:
+    
+    - **Verify credentials**: Double-check your username, password, host, and port
+    - **Check network access**: Ensure your database allows connections from TensorStax IP addresses
+    - **Firewall settings**: Verify your network firewall allows the connection
+    - **Database permissions**: Confirm your user has the necessary permissions
+  </Accordion>
+  
+  <Accordion icon="clock" title="Slow Connection">
+    If the connection is taking too long:
+    
+    - Check your internet connection
+    - Verify the database server is responsive
+    - Consider if there are any network latency issues
+  </Accordion>
+  
+  <Accordion icon="question" title="Need Help?">
+    Contact our support team if issues persist. Include:
+    
+    - Database type and version
+    - Error messages received
+    - Network configuration details
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Browse Schemas" icon="sitemap" href="#">
+    Explore your database tables, views, and relationships.
+  </Card>
+  <Card title="Clone Your Repo" icon="download" href="/repository-cloning">
+    Get started by cloning your repository.
+  </Card>
+</CardGroup>

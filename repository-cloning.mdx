@@ -1,0 +1,116 @@
+---
+title: 'Repository Cloning'
+description: 'Connect and clone your GitHub and GitLab repositories'
+---
+
+## Overview
+
+TensorStax allows you to connect and clone repositories from GitHub and GitLab for seamless code management and deployment.
+
+## GitHub Integration
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/emcGZWK.gif"
+  alt="GitHub Integration Process"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/emcGZWK.gif"
+  alt="GitHub Integration Process"
+/>
+
+<AccordionGroup>
+  <Accordion icon="gear" title="Navigate to Integrations">
+    First, click on the **Integrations** tab at the top of the integrations page to swap from data connectors to other integrations.
+
+    <img
+      className="block dark:hidden"
+      src="/images/git0.png"
+      alt="Integrations Tab"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/git0.png"
+      alt="Integrations Tab"
+    />
+  </Accordion>
+
+  <Accordion icon="github" title="Connect GitHub">
+    Click **Connect** under the GitHub section to begin the OAuth flow.
+
+    <img
+      className="block dark:hidden"
+      src="/images/github0.png"
+      alt="GitHub Connect Button"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/github0.png"
+      alt="GitHub Connect Button"
+    />
+
+    <Note>
+      You'll be redirected to GitHub to authorize TensorStax access to your repositories.
+    </Note>
+  </Accordion>
+
+  <Accordion icon="list-check" title="Select Repositories">
+    During the OAuth flow, you'll be able to select which repositories you want TensorStax to be able to clone.
+
+    <Tip>
+      You can always modify repository access later in your GitHub settings.
+    </Tip>
+  </Accordion>
+
+  <Accordion icon="refresh" title="View Connected Repositories">
+    Once you complete the OAuth flow and return to TensorStax, refresh the page to see the repositories you selected.
+
+    <img
+      className="block dark:hidden"
+      src="/images/github1.png"
+      alt="Connected GitHub Repositories"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/github1.png"
+      alt="Connected GitHub Repositories"
+    />
+  </Accordion>
+</AccordionGroup>
+
+## GitLab Integration
+
+First, click on the **Integrations** tab at the top of the integrations page to swap from data connectors to other integrations.
+
+<img
+  className="block dark:hidden"
+  src="/images/git0.png"
+  alt="Integrations Tab"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/git0.png"
+  alt="Integrations Tab"
+/>
+
+<Note>
+  **Coming Soon** - Documentation for GitLab repository cloning will be available soon. Stay tuned for updates!
+</Note>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Setting up your dbt project" icon="database" href="#">
+    Configure and manage your dbt transformations.
+  </Card>
+  <Card title="Setting up your Airflow project" icon="timeline" href="#">
+    Create and orchestrate data workflows with Apache Airflow.
+  </Card>
+  <Card title="Setting up your SQL projects" icon="code" href="#">
+    Develop and manage your SQL-based data projects.
+  </Card>
+  <Card title="Browse Schemas" icon="sitemap" href="#">
+    Explore your database tables, views, and relationships.
+  </Card>
+</CardGroup>
