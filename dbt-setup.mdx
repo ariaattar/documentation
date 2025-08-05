@@ -1,0 +1,89 @@
+---
+title: 'Setting Up Your Repo'
+description: 'Configure and manage your dbt transformations'
+---
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/lFMR45V.gif"
+  alt="dbt Setup Process"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/lFMR45V.gif"
+  alt="dbt Setup Process"
+/>
+
+## Overview
+
+Set up your dbt repository in TensorStax using one of three methods: pull from GitHub, create a TensorStax managed project, or pull from GitLab.
+
+## Getting Started
+
+For all three options, you'll need to:
+
+1. Navigate to the **dbt Projects** page
+2. Click **Dashboard** on the top right
+3. Choose your preferred setup method from the three options presented
+
+<Tip>
+If your dbt folder is in a broader data engineering repo, you can specify the right subdirectory such as `analytics/dbt` at the time of setup or later in the **Settings** page.
+</Tip>
+
+## Repository Integration
+
+<Note>
+Make sure you have already connected your GitHub or GitLab account in the Repository Cloning section.
+</Note>
+
+### GitHub
+
+1. From the dashboard, click **Clone from GitHub** to connect your existing dbt project.
+2. Choose the right repository from your connected GitHub repositories.
+3. Complete the setup process and start working with your dbt models.
+
+### GitLab
+
+1. From the dashboard, click **Clone from GitLab** to connect your existing dbt project.
+2. Choose the right repository from your connected GitLab repositories.  
+3. Complete the setup process and start working with your dbt models.
+
+## TensorStax Managed Project
+
+1. From the dashboard, click **TensorStax Managed** to create a new dbt project managed entirely within TensorStax.
+2. Select at least 1 connected data source for your dbt project.
+3. You can add more databases to your profiles later as needed.
+
+<Note>
+This option is perfect for getting started quickly without external repositories. We automatically set up the environment variables and profiles.yml for you with HashiCorp Vault. Make sure you have connected your data sources in the Data Connections section first.
+</Note>
+
+## Prerequisites
+
+Before setting up your dbt repository, ensure you have:
+
+<CardGroup cols={2}>
+  <Card title="Connected Data Source" icon="database" href="/data-connections">
+    Your database must be connected to TensorStax first.
+  </Card>
+  <Card title="Repository Access" icon="github" href="/repository-cloning">
+    For GitHub/GitLab options, ensure repository access is configured.
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Model Development" icon="code" href="#">
+    Start building your data models and transformations.
+  </Card>
+  <Card title="Testing & Documentation" icon="shield-check" href="#">
+    Add tests and documentation to your dbt project.
+  </Card>
+  <Card title="Scheduling" icon="clock" href="#">
+    Set up automated runs for your dbt models.
+  </Card>
+  <Card title="Advanced Features" icon="rocket" href="#">
+    Explore advanced dbt features and optimizations.
+  </Card>
+</CardGroup>

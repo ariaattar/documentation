@@ -1,0 +1,100 @@
+---
+title: 'Environment Variables'
+description: 'Configure environment variables for your dbt profiles using HashiCorp Vault'
+---
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/u9kaZmP.gif"
+  alt="Setting up Environment Variables"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/u9kaZmP.gif"
+  alt="Setting up Environment Variables"
+/>
+
+## Overview
+
+Environment variables are securely stored in HashiCorp Vault and used to configure your dbt profiles.yml file. This allows you to keep sensitive credentials separate from your code while maintaining secure access to your data sources.
+
+## How It Works
+
+When you set up environment variables in TensorStax:
+
+1. **Secure Storage**: All environment variables are encrypted and stored in HashiCorp Vault
+2. **Automatic Integration**: Variables are automatically injected into your dbt runtime environment
+3. **Profile Configuration**: Your profiles.yml file references these variables using the `env_var()` function
+
+## Setting Environment Variables
+
+Navigate to your dbt project settings and add the required environment variables for your data source connections. Common variables include:
+
+- Database credentials (username, password)
+- Connection details (account, warehouse, database)
+- Role and schema information
+
+## Example profiles.yml Configuration
+
+Here's how your profiles.yml file would reference the environment variables:
+
+```yaml
+snowflake_dbt_demo:
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
+      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
+      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
+      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
+      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
+      threads: 4
+  target: dev
+```
+
+## Security Benefits
+
+<CardGroup cols={2}>
+  <Card title="Encrypted Storage" icon="shield-check">
+    All environment variables are encrypted at rest in HashiCorp Vault.
+  </Card>
+  <Card title="Access Control" icon="key">
+    Role-based access controls determine who can view or modify variables.
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion icon="naming" title="Variable Naming Convention">
+    Use clear, descriptive names with prefixes to identify the service:
+    - `DBT_SNOWFLAKE_ACCOUNT`
+    - `DBT_POSTGRES_HOST`
+    - `DBT_BIGQUERY_PROJECT`
+  </Accordion>
+
+  <Accordion icon="rotate" title="Regular Rotation">
+    Regularly rotate sensitive credentials like passwords and API keys for enhanced security.
+  </Accordion>
+
+  <Accordion icon="eye-slash" title="Minimal Exposure">
+    Only set the environment variables that are actually needed for your dbt project.
+  </Accordion>
+
+  <Accordion icon="users" title="Team Access">
+    Grant environment variable access only to team members who need it for their work.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Configure Profiles" icon="gear" href="/dbt-setup">
+    Set up your dbt profiles to use these environment variables.
+  </Card>
+  <Card title="Test Connections" icon="wifi" href="#">
+    Test your database connections to ensure variables are configured correctly.
+  </Card>
+</CardGroup>

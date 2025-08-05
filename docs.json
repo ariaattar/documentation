@@ -24,6 +24,15 @@
             ]
           },
           {
+            "group": "dbt Projects",
+            "pages": [
+              "dbt-setup",
+              "dbt-env-vars",
+              "ai-terminal",
+              "quick-edit"
+            ]
+          },
+          {
             "group": "Essentials",
             "pages": [
               "essentials/markdown",
@@ -60,19 +69,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
           "anchor": "Blog",
           "href": "https://mintlify.com/blog",
           "icon": "newspaper"
+        },
+        {
+          "anchor": "dbt Setup",
+          "href": "https://mintlify.com/blog",
+          "icon": "/logo/dbt.png"
         }
       ]
     }

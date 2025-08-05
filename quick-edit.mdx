@@ -1,0 +1,79 @@
+---
+title: 'Quick Inline Edit'
+description: 'AI-powered dbt assistant with full lineage context'
+---
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/0REjnID.gif"
+  alt="Quick Inline Edit in Action"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/0REjnID.gif"
+  alt="Quick Inline Edit in Action"
+/>
+
+## Overview
+
+Quick Inline Edit is a side chat similar to popular code generation tools, but it's very fast and accurate at writing dbt code. It has context into the full lineage of models based on the selected model by default, making it incredibly powerful for dbt development.
+
+## Key Features
+
+- **Full Lineage Context**: Understands the complete model lineage and dependencies
+- **Context Visibility**: View the context through the lineage bar at the top of the dbt model content
+- **Sources Integration**: Click to see and include source definitions in context
+- **Multi-file Editing**: Edit multiple files simultaneously across the lineage
+- **Q&A Capability**: Answer questions about model relationships and lineage
+- **Real-time Speed**: The attached GIF is not sped up - edits happen instantly
+
+## How to Use
+
+1. **Select a model** to automatically load its lineage context
+2. **View the lineage bar** at the top to see what context Quick Inline Edit has
+3. **Ask questions** about the model relationships or request code changes
+4. **Use Cmd+Enter** to accept all suggested edits across multiple files
+
+<Tip>
+Quick Inline Edit can modify multiple files at once based on lineage relationships, making complex refactoring tasks much faster.
+</Tip>
+
+## Example Use Cases
+
+<AccordionGroup>
+  <Accordion icon="code" title="Model Refactoring">
+    Ask Quick Inline Edit to refactor a model and it will automatically update all downstream dependencies across multiple files.
+  </Accordion>
+
+  <Accordion icon="question" title="Lineage Questions">
+    "What models depend on this source?" or "How is this field calculated?" - Quick Inline Edit understands your entire data flow.
+  </Accordion>
+
+  <Accordion icon="edit" title="Column Changes">
+    Add or modify columns and Quick Inline Edit will propagate the changes through your lineage where appropriate.
+  </Accordion>
+
+  <Accordion icon="database" title="Source Integration">
+    Quick Inline Edit can see your source definitions and help you build models that properly reference and transform source data.
+  </Accordion>
+</AccordionGroup>
+
+## Context Understanding
+
+Quick Inline Edit's power comes from its deep understanding of your dbt project:
+
+- **Model Dependencies**: Knows which models depend on each other
+- **Source Definitions**: Understands your source tables and their schemas
+- **Column Lineage**: Tracks how columns flow through transformations
+- **Business Logic**: Understands the purpose and transformations in your models
+
+## Multi-File Editing
+
+When you make changes that affect multiple models, Quick Inline Edit can:
+
+- Update all related models simultaneously
+- Maintain consistency across your lineage
+- Ensure referential integrity
+- Apply consistent naming conventions
+
+Use `Cmd+Enter` to accept all suggested changes across multiple files at once.
