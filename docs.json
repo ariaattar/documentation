@@ -70,13 +70,8 @@
       "anchors": [
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://tensorstax.com/blog",
           "icon": "newspaper"
-        },
-        {
-          "anchor": "dbt Setup",
-          "href": "https://mintlify.com/blog",
-          "icon": "/logo/dbt.png"
         }
       ]
     }
