@@ -4,7 +4,7 @@
   "name": "Mint Starter Kit",
   "colors": {
     "primary": "#FF7F50",
-    "light": "#FF9D7D",
+    "light": "#E9622D",
     "dark": "#E9622D"
   },
   "favicon": "/favicon.svg",
@@ -16,7 +16,6 @@
           {
             "group": "Get Started",
             "pages": [
-              "index",
               "data-connections",
               "repository-cloning"
             ]
@@ -31,17 +30,6 @@
               "lineage",
               "semantic-search"
             ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
           }
         ]
       },
@@ -50,9 +38,7 @@
         "groups": [
           {
             "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": []
           },
           {
             "group": "Endpoint Examples",
@@ -69,9 +55,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Blog",
-          "href": "https://tensorstax.com/blog",
-          "icon": "newspaper"
+          "anchor": "Website",
+          "href": "https://tensorstax.com",
+          "icon": "globe"
+        },
+        {
+          "anchor": "Book a Call",
+          "href": "https://calendly.com/aria-tensorstax/tensorstax-intro",
+          "icon": "calendar"
         }
       ]
     }

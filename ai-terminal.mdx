@@ -1,0 +1,174 @@
+---
+title: 'SmartCLI'
+description: 'Intelligent command-line interface with smart autocompletion'
+---
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/LEIapt5.gif"
+  alt="SmartCLI in Action"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/LEIapt5.gif"
+  alt="SmartCLI in Action"
+/>
+
+## Overview
+
+SmartCLI provides an intelligent command-line interface that combines traditional terminal functionality with smart autocompletion. Execute dbt commands, Git operations, and standard Linux commands with intelligent assistance. The terminal knows about which files exist in your repository for enhanced suggestions.
+
+<Tip>
+Try asking nuestions in natural language and pressing Tab to get the right command suggestions for your needs.
+</Tip>
+
+## Smart Autocompletion
+
+The special feature of SmartCLI is its intelligent autocompletion. When you:
+
+1. **Type a partial command** and press `Tab`
+2. **Ask a question** and press `Tab`
+3. **Need help with syntax** and press `Tab`
+
+The terminal will automatically suggest or complete the appropriate command for you.
+
+### Example Interactions
+
+<AccordionGroup>
+  <Accordion icon="question" title="Profile Verification">
+    **Question:** "how do i verify if my dbt profiles set up right"
+    
+    **Press Tab** → Auto-completes to: `dbt debug`
+    
+    This command checks your dbt configuration and profile setup.
+  </Accordion>
+
+  <Accordion icon="eye" title="Show Model Data">
+    **Question:** "dbt show dim suppliers"
+    
+    **Press Tab** → Auto-completes to: `dbt show --select marts.core.dim_suppliers`
+    
+    Displays a sample of data from your dim_suppliers model with proper path resolution.
+  </Accordion>
+
+  <Accordion icon="shield-check" title="Testing">
+    **Question:** "how do i test my data"
+    
+    **Press Tab** → Auto-completes to: `dbt test`
+    
+    Runs all tests defined in your dbt project.
+  </Accordion>
+
+  <Accordion icon="code-branch" title="Git Operations">
+    **Question:** "show me commits from last week with file changes"
+    
+    **Press Tab** → Auto-completes to: `git log --since="1 week ago" --stat --oneline`
+    
+    Displays commits from the last week with file change statistics in a compact format.
+  </Accordion>
+</AccordionGroup>
+
+## Supported Commands
+
+<AccordionGroup>
+  <Accordion icon="database" title="dbt Commands">
+    - `dbt run` - Execute models
+    - `dbt test` - Run tests
+    - `dbt debug` - Check configuration
+    - `dbt compile` - Compile models
+    - `dbt docs generate` - Generate documentation
+    - And all other standard dbt commands
+  </Accordion>
+
+  <Accordion icon="code-branch" title="Git Commands">
+    - `git status` - Repository status
+    - `git add` - Stage changes
+    - `git commit` - Commit changes
+    - `git push` - Push to remote
+    - `git pull` - Pull from remote
+    - And all other Git operations
+  </Accordion>
+
+  <Accordion icon="terminal" title="Linux Commands">
+    - `ls` - List directory contents
+    - `cd` - Change directory (within project)
+    - `cat` - Display file contents
+    - `grep` - Search text
+    - `find` - Find files
+    - And other standard Linux utilities
+  </Accordion>
+</AccordionGroup>
+
+## Security Restrictions
+
+For security and project integrity, certain commands are restricted:
+
+<AccordionGroup>
+  <Accordion icon="folder-xmark" title="Directory Restrictions">
+    **Restricted:** `cd` commands that navigate outside the dbt project directory
+    
+    **Reason:** Keeps you within your project workspace for security
+  </Accordion>
+
+  <Accordion icon="user-shield" title="Privilege Restrictions">
+    **Restricted:** `sudo` commands and other privileged operations
+    
+    **Reason:** Prevents unauthorized system-level changes
+  </Accordion>
+
+  <Accordion icon="trash" title="Destructive Operations">
+    **Restricted:** Commands that could damage the system or other projects
+    
+    **Reason:** Maintains environment stability and security
+  </Accordion>
+</AccordionGroup>
+
+## Quick Edit
+
+<img
+  className="block dark:hidden"
+  src="https://i.imgur.com/0REjnID.gif"
+  alt="Quick Edit in Action"
+/>
+<img
+  className="hidden dark:block"
+  src="https://i.imgur.com/0REjnID.gif"
+  alt="Quick Edit in Action"
+/>
+
+Quick Edit is a side chat similar to popular code generation tools, but it's very fast and accurate at writing dbt code. It has context into the full lineage of models based on the selected model by default.
+
+### Key Features
+
+- **Full Lineage Context**: Understands the complete model lineage and dependencies
+- **Context Visibility**: View the context through the lineage bar at the top of the dbt model content
+- **Sources Integration**: Click to see and include source definitions in context
+- **Multi-file Editing**: Edit multiple files simultaneously across the lineage
+- **Q&A Capability**: Answer questions about model relationships and lineage
+- **Real-time Speed**: The attached GIF is not sped up - edits happen instantly
+
+### Usage
+
+1. **Select a model** to automatically load its lineage context
+2. **View the lineage bar** at the top to see what context Quick Edit has
+3. **Ask questions** about the model relationships or request code changes
+4. **Use Cmd+Enter** to accept all suggested edits across multiple files
+
+<Tip>
+Quick Edit can modify multiple files at once based on lineage relationships, making complex refactoring tasks much faster.
+</Tip>
+
+## Quick Actions
+
+For common dbt operations, you can simply click the **Preview** or **Build** buttons to preview or build the whole project directly without using command-line tools.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="dbt Setup" icon="database" href="/dbt-setup">
+    Set up your dbt project to use with the AI Terminal.
+  </Card>
+  <Card title="Environment Variables" icon="key" href="/dbt-env-vars">
+    Configure environment variables for your dbt profiles.
+  </Card>
+</CardGroup>
