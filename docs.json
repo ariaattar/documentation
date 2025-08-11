@@ -17,7 +17,17 @@
             "group": "Get Started",
             "pages": [
               "data-connections",
-              "repository-cloning"
+              "data-viewer",
+              "repository-cloning",
+              "custom-rules"
+            ]
+          },
+          {
+            "group": "Agent",
+            "pages": [
+              "context",
+              "autonomous-mode",
+              "agent-capabilities"
             ]
           },
           {
@@ -29,6 +39,18 @@
               "quick-edit",
               "lineage",
               "semantic-search"
+            ]
+          },
+          {
+            "group": "Airflow Projects",
+            "pages": [
+              "airflow-projects"
+            ]
+          },
+          {
+            "group": "SQL Projects",
+            "pages": [
+              "sql-projects"
             ]
           }
         ]

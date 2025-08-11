@@ -1,0 +1,70 @@
+---
+title: 'Autonomous Mode'
+description: 'Choose between autonomous execution or human-in-the-loop mode for your agent sessions'
+---
+
+## Overview
+
+TensorStax offers two execution modes to match your workflow preferences and project requirements. Choose between full autonomous execution or human-in-the-loop mode for greater control over the agent's actions.
+
+## Mode Options
+
+<AccordionGroup>
+  <Accordion icon="user" title="Human-in-the-Loop Mode">
+    
+    **Interactive Control**: The agent asks for confirmation after every plan step and before the session begins.
+    
+    - Review and approve each step before execution
+    - Request plan updates before the agent starts
+    - Redo any step as many times as needed
+    - Move to the next step only when you're satisfied
+    
+    <Note>
+    Even in human-in-the-loop mode, TensorStax will automatically attempt to fix dbt model errors on its own before asking for your input.
+    </Note>
+
+  </Accordion>
+
+  <Accordion icon="robot" title="Autonomous Mode">
+    
+    **End-to-End Execution**: The agent executes the complete plan without interruptions.
+    
+    - Runs the entire plan from start to finish
+    - Self-corrects when errors occur
+    - Automatically retries failed steps
+    - Continues until the expected result is achieved
+
+  </Accordion>
+
+  <Accordion icon="pen-to-square" title="Post-Execution Editing">
+    
+    **Flexible Corrections**: Regardless of execution mode, you can always make changes afterward.
+    
+    - Use Quick Edit for simple modifications
+    - Access Open Editor View for comprehensive changes
+    - Manual file editing is always available
+    - Make adjustments even after autonomous completion
+
+  </Accordion>
+</AccordionGroup>
+
+## Choosing the Right Mode
+
+<CardGroup cols={2}>
+  <Card title="Use Human-in-the-Loop When:" icon="user-check">
+    - Working on critical production models
+    - Learning how TensorStax approaches problems
+    - Need to review each step for compliance
+    - Want to customize the approach mid-execution
+  </Card>
+  <Card title="Use Autonomous When:" icon="bolt">
+    - Prototyping or exploring data
+    - Working on non-critical development tasks
+    - Trust the agent's decision-making
+    - Need fast iteration and results
+  </Card>
+</CardGroup>
+
+<Tip>
+**Best Practice**: Start with human-in-the-loop mode for new projects to understand TensorStax's approach, then switch to autonomous mode for similar tasks once you're comfortable with the patterns.
+</Tip>

@@ -1,0 +1,94 @@
+---
+title: 'Agent Session'
+description: 'Learn how to start an agent session and configure context for your data analysis'
+---
+
+<iframe 
+  src="https://screen.studio/share/vuqr721q"
+  width="100%" 
+  height="400"
+  frameborder="0"
+  allowfullscreen
+>
+</iframe>
+
+## Overview
+
+Agent sessions are the core of TensorStax's intelligent data analysis platform. Before you can start asking questions or running analysis, you need to configure the context that defines which data sources and tables your agent will work with.
+
+## Getting Started with Context
+
+The first and most important step in any agent session is selecting your context. Context tells the agent which materialized tables it should focus on for your analysis.
+
+<Note>
+**dbt Model Integration** - TensorStax automatically maps your materialized tables to their source dbt models and pulls the complete lineage including source models, YAML configurations, tests, and macros. This allows TensorStax to create new models following your existing patterns and edit existing files when needed.
+</Note>
+
+### Context Configuration
+
+<AccordionGroup>
+  <Accordion icon="database" title="Selecting Materialized Tables">
+    
+    The primary component of your context is selecting which materialized tables you want to work with. You can:
+    
+    - **Search for tables**: Use the search functionality to quickly find specific tables
+    - **Browse available tables**: Use the dropdown to explore all available materialized tables
+    - **View table schema**: Once selected, you'll see all columns available in each table
+    
+    This selection determines what data the agent can access and analyze during your session.
+
+  </Accordion>
+
+  <Accordion icon="list" title="Table Schema Display">
+    
+    When you select materialized tables, TensorStax automatically:
+    
+    - Shows all column names and data types
+    - Displays table relationships and dependencies  
+    - Pulls the complete DDL (Data Definition Language) for the table in the background
+    
+    This schema information helps the agent understand your data structure and provide more accurate analysis.
+
+  </Accordion>
+
+  <Accordion icon="shield" title="Data Privacy & Security">
+    
+    <Note>
+    **Important**: TensorStax by default never sees your raw data. The system only accesses table schemas and metadata to understand your data structure.
+    </Note>
+    
+    However, you have the option to **"Include Sample Row"** which will:
+    - Pull the first row from your database
+    - Provide the agent with actual data examples
+    - Enable more sophisticated analysis tasks like flattening nested JSON fields
+    - Help with data type inference and validation
+    
+    <Warning>
+    Only enable "Include Sample Row" when you're comfortable sharing a sample of your data with the analysis engine.
+    </Warning>
+
+  </Accordion>
+
+  <Accordion icon="gear" title="Applying Context">
+    
+    Once you've configured your context:
+    
+    1. **Review your selections**: Confirm the tables and settings are correct
+    2. **Apply context**: Click apply to activate your configuration
+    3. **Background processing**: TensorStax builds lineage mapping your materialized tables to their source dbt models, tests, and macros
+    4. **Ready for analysis**: Your agent session is now ready for questions and tasks
+    
+    The context remains active throughout your session and can be modified as needed.
+
+  </Accordion>
+
+  <Accordion icon="lightbulb" title="Use Cases for Sample Rows">
+    
+    Enabling sample rows is useful for JSON field analysis, data type validation, and complex transformations that require actual data examples.
+
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+**Privacy First**: TensorStax only accesses your table schemas and DDLs by default - your raw data remains private and secure unless you explicitly enable sample rows.
+</Tip>

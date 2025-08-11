@@ -1,0 +1,82 @@
+---
+title: 'Custom Rules'
+description: 'Set custom business logic and rules that TensorStax will follow for each connected service'
+---
+
+## Overview
+
+Custom rules allow you to define specific business logic and standards that TensorStax will consistently follow when working with your connected services. Once set, these rules are automatically applied every time the agent interacts with the corresponding service.
+
+## Service-Specific Rules
+
+### <Icon icon="cube" /> dbt Rules
+
+Define standards and patterns for dbt model creation and management.
+
+- Naming conventions for models, tests, and macros
+- Required documentation standards
+- Model materialization preferences
+- Testing requirements and coverage rules
+- Folder structure and organization patterns
+
+### <Icon icon="database" /> SQL Rules
+
+Set guidelines for SQL query generation and database interactions.
+
+- Query formatting and style preferences
+- Table and column naming conventions
+- Performance optimization requirements
+- Security and access control standards
+- Data type and constraint preferences
+
+### <Icon icon="cloud" /> Airflow Rules
+
+Configure standards for DAG creation and workflow management.
+
+- DAG naming and tagging conventions
+- Task dependency patterns and best practices
+- Retry and timeout configurations
+- Resource allocation guidelines
+- Scheduling and trigger preferences
+
+### <Icon icon="python" /> Python Rules
+
+Establish coding standards and practices for Python scripts.
+
+- Code formatting and style guidelines
+- Library and package preferences
+- Error handling and logging standards
+- Documentation and commenting requirements
+- Performance and optimization rules
+
+### <Icon icon="aws" /> AWS Glue Rules
+
+Define standards for Glue script creation and ETL processes.
+
+- Job naming and configuration standards
+- Resource allocation and scaling rules
+- Data format and transformation preferences
+- Error handling and monitoring requirements
+- Security and IAM role specifications
+
+## Rule Management
+
+<Note>
+**Consistent Application**: Once configured, custom rules are automatically enforced across all agent interactions with the respective services, ensuring consistency and compliance with your organization's standards.
+</Note>
+
+### Rule Configuration
+
+- **Service-Level Rules**: Set rules that apply to all operations within a specific service
+- **Project-Level Rules**: Define rules that apply across multiple services within a project
+- **Global Rules**: Establish organization-wide standards that apply to all projects and services
+
+### Rule Enforcement
+
+- **Automatic Validation**: Rules are checked and enforced during code generation
+- **Real-Time Feedback**: Immediate notifications when rules cannot be satisfied
+- **Compliance Reporting**: Track adherence to custom rules across all operations
+
+<Tip>
+**Best Practice**: Start with essential rules for naming conventions and security standards, then gradually expand to include style preferences and optimization guidelines as your team becomes familiar with the system.
+</Tip>

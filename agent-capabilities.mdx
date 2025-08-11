@@ -1,0 +1,178 @@
+---
+title: 'Agent Capabilities'
+description: 'Learn what TensorStax agents can do and the verification processes they use'
+---
+
+## Overview
+
+TensorStax agents are designed to verify every action they take, ensuring reliability and accuracy in your data workflow. The agent provides real-time feedback and validation for all operations it performs.
+
+<AccordionGroup>
+  <Accordion icon="cube" title="dbt Capabilities">
+    
+    ### <Icon icon="file-code" /> dbt Models
+
+    **Creation & Editing**: Write new dbt models and edit existing ones with automatic verification.
+
+    - Auto-generates preview of model output
+    - Automatic error detection and fixing
+    - File versioning for all changes
+    - Can edit existing dbt models, YML files, tests, and macros
+
+    ### <Icon icon="flask" /> Tests
+
+    **Automated Testing**: Create and execute dbt tests with real-time results.
+
+    - Tests auto-execute after creation
+    - Agent receives immediate pass/fail feedback
+    - Test results visible to users
+    - Ensures data quality validation
+
+    ### <Icon icon="file-lines" /> YML Files
+
+    **Schema Management**: Create and maintain YML configuration files.
+
+    - Schema definitions and documentation
+    - Test configurations
+    - Model properties and metadata
+
+    ### <Icon icon="shield-exclamation" /> Safety Restrictions
+
+    **Execution Boundaries**: The agent cannot perform destructive operations.
+
+    - **Cannot** execute `dbt build`, `dbt run`, or change tables
+    - **Cannot** modify database state directly
+    - Users must press the play button to run models
+    - Read-only access to database schemas and metadata
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion icon="cloud" title="Airflow Capabilities">
+    
+    ### <Icon icon="calendar-days" /> DAG Creation & Editing
+
+    **DAG Management**: Create new DAGs and edit existing ones with custom operators.
+
+    - Create new Airflow DAGs from scratch
+    - Edit and modify existing DAG configurations
+    - Use custom operators tailored to your workflows
+    - Full DAG lifecycle management
+
+    ### <Icon icon="play" /> DAG Simulation
+
+    **In-Memory Testing**: Simulate DAG execution without running actual tasks.
+
+    - Uses TensorStax custom Airflow compiler
+    - Simulates DAG execution in memory
+    - Validates DAG structure and dependencies
+    - No actual task execution or resource consumption
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion icon="aws" title="AWS Glue Capabilities">
+    
+    ### <Icon icon="cloud-arrow-up" /> Script Creation & Sync
+
+    **Glue Script Management**: Create scripts and sync them directly to your AWS environment.
+
+    - Create new Glue scripts from scratch
+    - Automatic sync back to customer's AWS account
+    - Full integration with AWS Glue service
+    - Version control and script management
+
+    ### <Icon icon="terminal" /> Interactive Testing
+
+    **Live Code Testing**: Test code snippets before finalizing scripts.
+
+    - Spin up interactive Glue sessions
+    - Test code snippets in real-time
+    - Validate logic before creating final scripts
+    - Safe testing environment
+
+    ### <Icon icon="database" /> AWS Context Integration
+
+    **Full AWS Glue Context**: Access to your complete Glue environment.
+
+    - Context into Glue connections and databases
+    - Access to tables, crawlers, and metadata
+    - Integration with existing Glue resources
+    - User must press play button to execute scripts
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion icon="database" title="Direct SQL Capabilities">
+    
+    ### <Icon icon="magnifying-glass" /> SELECT Queries & File Management
+
+    **Query Execution & Storage**: Run SELECT queries and manage SQL files.
+
+    - Execute SELECT queries directly against your database
+    - Save .sql files in your project for reuse
+    - Edit existing .sql files with real-time validation
+    - Preview table changes when editing existing files
+
+    ### <Icon icon="table" /> CREATE Statements
+
+    **DDL Query Writing**: Write CREATE TABLE and CREATE VIEW statements with preview.
+
+    - Write CREATE TABLE and CREATE VIEW queries
+    - Build on top of existing tables and data
+    - Preview data output before execution
+    - Verification against database schema
+    - User must press play button to execute
+
+    ### <Icon icon="arrows-rotate" /> UPDATE & INSERT Statements
+
+    **DML Query Writing**: Write UPDATE and INSERT queries with diff preview.
+
+    - Write UPDATE queries with change preview
+    - Incremental inserts from source to type 2 tables
+    - Data diff preview showing what will change
+    - No actual table modifications until play button pressed
+    - Full verification before execution
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion icon="python" title="Python Capabilities">
+    
+    ### <Icon icon="file-code" /> Script Execution
+
+    **Local Python Processing**: Execute Python scripts on available data.
+
+    - Execute regular Python scripts on local CSV files
+    - Process and analyze data using Python libraries
+    - Safe execution environment for data exploration
+    - Integration with existing data sources
+
+    ### <Icon icon="chart-line" /> API Structure Analysis
+
+    **Pre-Integration Validation**: Check API structures before building data pipelines.
+
+    - Analyze API structures and endpoints
+    - Validate data formats before creating Glue scripts
+    - Test API responses before building Airflow DAGs
+    - Ensure compatibility with ingestion workflows
+
+    ### <Icon icon="key" /> Environment Variables
+
+    **Secure Configuration Management**: Access environment variables stored in Vault.
+
+    - Use environment variables set up in HashiCorp Vault
+    - Secure access to API keys and credentials
+    - Configuration management for scripts and workflows
+    - Encrypted variable storage and retrieval
+
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+**Verification First**: Every action taken by TensorStax agents includes built-in verification to ensure accuracy and prevent errors from propagating through your data pipeline.
+</Note>
